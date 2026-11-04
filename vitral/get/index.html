@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Get Vitral</title>
+<!-- Enlace único para las biografías de las redes (TikTok solo admite uno): lleva a la tienda del dispositivo.
+     ?s=<origen> pasa a Play como utm_source (Firebase lo registra en la instalación); en el ordenador, los dos botones. -->
+<script>
+  (function () {
+    var ua = navigator.userAgent;
+    var source = (new URLSearchParams(location.search).get("s") || "social").replace(/[^\w-]/g, "");
+    var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    if (ios) location.replace("https://apps.apple.com/app/id6824040454");
+    else if (/Android/.test(ua)) location.replace("https://play.google.com/store/apps/details?id=com.rcudev.vitral&referrer=" +
+      encodeURIComponent("utm_source=" + source + "&utm_medium=bio"));
+  })();
+</script>
+<style>
+  :root { --bg:#F3EDE2; --surface:#FFFBF4; --text:#1E1D24; --accent:#8A5F12; --line:rgba(30,29,36,.12); }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0A0910; --surface:#13111B; --text:#F6EFE3; --accent:#F2C46B; --line:rgba(246,239,227,.10); } }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width:680px; margin:0 auto; padding:40px 16px 64px; text-align:center; }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-size:40px; margin:0 0 8px; } a { color:var(--accent); }
+  .stores { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin:24px 0; }
+  .stores a { padding:12px 22px; border-radius:999px; background:var(--surface); border:1px solid var(--line); font-weight:600; text-decoration:none; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Vitral</h1>
+  <p>Logic puzzles in stained glass · Juegos de lógica con luz de vidriera</p>
+  <p class="stores"><a href="https://apps.apple.com/app/id6824040454">App Store</a><a href="https://play.google.com/store/apps/details?id=com.rcudev.vitral">Google Play</a></p>
+  <p><a href="../">More · Más</a></p>
+</main>
+</body>
+</html>
