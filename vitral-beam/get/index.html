@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Get Vitral Beam</title>
+<!-- Enlace de la app al compartir el resultado (?s=share) y para las biografías de las redes: lleva a la tienda del
+     dispositivo de quien lo abre. ?s=<origen> pasa a Play como utm_source (Firebase lo registra en la instalación); en
+     el ordenador, los dos botones. Como vitral/get. -->
+<script>
+  (function () {
+    var ua = navigator.userAgent;
+    var source = (new URLSearchParams(location.search).get("s") || "social").replace(/[^\w-]/g, "");
+    var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    if (ios) location.replace("https://apps.apple.com/app/id6828439042");
+    else if (/Android/.test(ua)) location.replace("https://play.google.com/store/apps/details?id=com.rcudev.vitralbeam&referrer=" +
+      encodeURIComponent("utm_source=" + source + "&utm_medium=bio"));
+  })();
+</script>
+<style>
+  :root { --bg:#EDF2F3; --surface:#FAFDFD; --text:#18202A; --accent:#7E570E; --line:rgba(24,32,42,.12); }
+  @media (prefers-color-scheme: dark) { :root { --bg:#070B12; --surface:#0E1420; --text:#EEF3F6; --accent:#F4C66A; --line:rgba(238,243,246,.10); } }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width:680px; margin:0 auto; padding:40px 16px 64px; text-align:center; }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-size:40px; margin:0 0 8px; } a { color:var(--accent); }
+  .stores { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin:24px 0; }
+  .stores a { padding:12px 22px; border-radius:999px; background:var(--surface); border:1px solid var(--line); font-weight:600; text-decoration:none; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Vitral Beam</h1>
+  <p>One-line logic puzzle · Puzzle de lógica de un solo trazo</p>
+  <p class="stores"><a href="https://apps.apple.com/app/id6828439042">App Store</a><a href="https://play.google.com/store/apps/details?id=com.rcudev.vitralbeam">Google Play</a></p>
+  <p><a href="../">More · Más</a></p>
+</main>
+</body>
+</html>
