@@ -1,0 +1,11 @@
+== Novedades 1.1 (ES) ==
+Un panel cada día
+- Vidriera del mes: Cada puzzle del día enciende un panel. Hay regalos a los 7, 14 y 21, y si la completas dentro del mes, ganas un estilo de vidrio que solo se consigue ese mes.
+- Juego libre: 5.000 tableros más por dificultad. Uno al día gratis, y todos con Vitral sin límites.
+- Comparte tus hitos: Las rachas de 7, 30, 100 y 365 días y cada vidriera completa, en una imagen para compartir.
+
+== Novedades 1.1 (EN) ==
+A pane every day
+- Window of the Month: Every daily puzzle lights a pane. Gifts at 7, 14 and 21 panes, and complete it within the month for a glass style you can only win that month.
+- Free play: 5,000 more boards by difficulty. One a day for free, and all of them with Vitral Unlimited.
+- Share your milestones: Streaks of 7, 30, 100 and 365 days and every completed window, as an image to share.
